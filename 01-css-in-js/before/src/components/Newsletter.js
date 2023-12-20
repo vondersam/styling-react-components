@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
 const color = {
-  spectrum1: "#ff598a",
-  spectrum2: "#de56e8",
-  spectrum3: "#b36bff",
-  spectrum4: "#5b56e8",
-  spectrum5: "#5e9fff",
+  spectrum1: '#ff598a',
+  spectrum2: '#de56e8',
+  spectrum3: '#b36bff',
+  spectrum4: '#5b56e8',
+  spectrum5: '#5e9fff'
 };
 
 export default function Newsletter() {
-  const [email, setEmail] = React.useState("");
+  const [email, setEmail] = React.useState('');
   const emailPartsCount = countEmailParts(email);
   return (
     <Container>
@@ -45,7 +45,12 @@ function Container(props) {
             padding: 1em 1em 2em 1em;
             background: #2b283d;
           }
-          /* 1-1 */
+          @media (min-width: 800px) {
+            section {
+              font-size: 2.5em;
+              max-width: 700px;
+            }
+          }
         `}
       </style>
     </section>
@@ -117,11 +122,11 @@ function Submit(props) {
             text-transform: uppercase;
             transition: all 300ms;
             /* 1-4 */
-            translate: ${props.active ? "-50% 50%" : "-50%"};
-            rotate: ${props.active ? "-5deg" : "45deg"};
+            translate: ${props.active ? '-50% 50%' : '-50%'};
+            rotate: ${props.active ? '-5deg' : '45deg'};
             border-bottom: ${props.active
               ? `3px solid ${color.spectrum5}`
-              : "0"};
+              : '0'};
             outline: none;
           }
           /* 1-5 */
